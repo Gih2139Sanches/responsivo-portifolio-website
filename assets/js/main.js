@@ -66,7 +66,28 @@ tabs.forEach(tab =>{
     tab.classList.add('qualification_active')
   })
 })
+
 /*==================== SERVICES MODAL ====================*/
+const modalViews = document.querySelectorAll('.services_modal'),
+      modalBtns = document.querySelectorAll('.services_button'),
+      modalClose = document.querySelectorAll('.services_modal-close')
+  
+let modal = function(modalClick){
+  modalViews[modalClick].classList.add('active-modal')
+}
+modalBtns.forEach((modalBtns, i) =>{
+  modalBtns.addEventListener('click', ()=>{
+    modal(i)
+  })
+})
+
+modalClose.forEach((modalClose)=>{
+  modalClose.addEventListener('click',()=>{
+    modalViews.forEach((modalView)=>{
+      modalView.classList.remove('active-modal')
+    })
+  })
+})
 
 /*==================== PORTFOLIO SWIPER  ====================*/
 
