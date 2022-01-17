@@ -118,8 +118,8 @@ let swiperTestimonial = new Swiper('.testimonial-container',{
   breakpoints:{
     568:{
       slidespaerView: 2,
-    }
-  }
+    },
+  },
 });
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
